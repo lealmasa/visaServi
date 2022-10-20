@@ -32,7 +32,7 @@ const Servicios = () => (
           </div>
           <p className=" text-sm">{service.subtitle}</p>
           <a  className=" flex justify-end ml-auto items-center  mt-auto cursor-pointer">
-          <span className=" text-sm">Ver mas</span>
+          <span className=" text-sm font-medium">Mas información</span>
           <img src={iconLink} alt="" className=" opacity-80" />
           </a>
         </div>
