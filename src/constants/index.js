@@ -3,7 +3,7 @@ import {iconMail, iconPhone, iconLocation, iconFb, iconWs, iconIg, iconLocationR
 export const navLinks = [
     {
       id: "inicio",
-      title: "Inicio",
+      title: "Inicioss",
       link: "/"
     },
     {
