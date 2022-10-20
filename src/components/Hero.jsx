@@ -2,12 +2,12 @@ import React from 'react'
 
 import Search from './Search';
 
-import {bgImage, iconPlane} from "../assets";
+import {iconPlane} from "../assets";
 
 const Hero = () => {
   return (
     <div>
-        <div className=' bg-hero-img  h-[540px] bg-cover sm:h-[510px] bg-center  justify-between sm:justify-start rounded-xl sm:rounded-lg px-6 py-8 sm:px-16 sm:py-24 flex flex-col gap-y-6' >
+        <div className=' backgroundImage  h-[540px] bg-cover sm:h-[510px] bg-center  justify-between sm:justify-start rounded-xl sm:rounded-lg px-6 py-8 sm:px-16 sm:py-24 flex flex-col gap-y-6' >
             <div className=' flex flex-col gap-y-2'>
                 <h1 className=' text-4xl font-semibold leading-tight'>
                 Asesoría Profesional en  <br className=' sm:block hidden' ></br> trámites de Visa Americana.

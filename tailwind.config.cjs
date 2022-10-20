@@ -4,9 +4,6 @@ module.exports = {
   mode: "jit",
   theme: {
     extend: {
-      backgroundImage: {
-        'hero-img': "url('./src/assets/hero--background-image.jpg')",
-      },
       colors: {
         bgPrimary: "#F8F9FA",
         primary: "#2E2C61",

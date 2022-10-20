@@ -65,3 +65,8 @@ body {
   background-color: #1877F2;
 
 }
+
+
+.backgroundImage {
+  background-image: url('./src/assets/hero--background-image.jpg');
+}
