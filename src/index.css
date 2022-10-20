@@ -67,6 +67,6 @@ body {
 }
 
 
-.backgroundImage {
-  background-image: url('./src/assets/hero--background-image.jpg');
+.bg-img {
+  background-image: url(/assets/hero--background.jpg);
 }

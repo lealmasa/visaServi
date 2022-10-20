@@ -20,7 +20,7 @@ import iconClose from "./navbar--icon-cancel.svg";
 import iconBurger from "./navbar--icon-burger.svg";
 import iconQuote from "./icon-quote.svg";
 import iconGoTop from "./iconGoTop.svg";
-import bgImage from "./hero--background-image.jpg";
+import bgImage from "./hero--background.jpg";
 import imgCliente from "./img-cliente.jpg";
 
 
