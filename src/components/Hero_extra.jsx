@@ -5,7 +5,7 @@ const Hero_extra = ({ page }) => {
   
   return (
     <>
-      <div className=" grid grid-cols-[fit-content(50%)_1fr] grid-rows-[fit-content(50%)_1fr_0.5fr] gap-x-8 gap-y-4">
+      <div className=" sm:grid flex flex-col sm:grid-cols-[fit-content(50%)_1fr] sm:grid-rows-[fit-content(50%)_fit-content(50%)_1fr] gap-x-8 gap-y-4">
         <img
           src={page.img}
           alt=""
@@ -13,7 +13,7 @@ const Hero_extra = ({ page }) => {
         />
         <h2 className=" text-lg leading-tight font-semibold">{page.tile}</h2>
         <p className=" text-sm">{page.subtitle}</p>
-        <div className=" self-end justify-self-end">
+        <div className=" self-start mt-4 justify-self-end">
           <Button></Button>
         </div>
       </div>

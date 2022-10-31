@@ -42,11 +42,11 @@ export const ServicioP = () => {
           <h1 className=" text-4xl font-semibold text-primary   mt-10  ">
             Nuestros Servicios
           </h1>
-          <div className=" bg-bgPrimary lg:max-w-[1280px] w-full mt-8  p-10 py-4 rounded-lg">
+          <div className=" bg-bgPrimary lg:max-w-[1280px] w-full mt-8 p-4 sm:p-10 rounded-lg">
             <Hero_extra page={AltHeroParam()} />
             <div className=" mt-12">
               {visaInfos.map((visaInfo) => (
-                <ServiciosDesc key={visaInfo.id} {...visaInfo} page={AltHeroParam()} />
+                <ServiciosDesc key={visaInfo.index} {...visaInfo} page={AltHeroParam()} />
               ))}
             </div>
           </div>
