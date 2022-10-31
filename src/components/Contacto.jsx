@@ -4,7 +4,7 @@ import { contact, info } from "../constants/index";
 
 const Contacto = () => (
   <div className=" lg:max-w-[1280px] mb-8 px-4 sm:px-[9rem] grid grid-cols-1 sm:grid-cols-2 grid-rows-[1fr_fr_2fr]  sm:gap-x-8 gap-y-6 sm:gap-y-12">
-    <h2 className=" text-lg text-white text-center col-span-2">
+    <h2 className=" text-lg text-white text-center col-span-2" >
       ¿Ya estás listo para viajar o tienes alguna duda?
     </h2>
     <div className=" row-start-2 sm:w-[100%] ">

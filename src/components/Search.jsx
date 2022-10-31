@@ -4,7 +4,7 @@ import {iconPlus, iconSearch} from "../assets";
 
 const Search = () => {
   return (
-    <div className=' z-10 bg-bgPrimary py-10 px-8 sm:px-12 sm:absolute  top-[530px] left-0 right-0 mx-auto max-w-[720px] rounded-lg sm:shadow-2xl flex flex-col sm:flex-row justify-between gap-y-8 sm:gap-y-0'>
+    <div className=' z-10 bg-bgPrimary py-10 px-8 sm:px-12 sm:absolute  top-[530px] mt-4 sm:mt-0 left-0 right-0 mx-auto max-w-[720px] rounded-lg sm:shadow-2xl flex flex-col sm:flex-row justify-between gap-y-8 sm:gap-y-0'>
         <h2 className=' text-lg  font-semibold leading-[120.5%] my-auto'>
         Encuenta la <br className=' sm:block hidden'></br> información que <br className=' sm:block hidden' ></br> necesitas para tu viaje
         </h2>

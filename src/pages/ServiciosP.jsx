@@ -1,13 +1,23 @@
-import React from "react";
+import {
+    ServiciosCards,
+    Contacto,
+    Footer,
+  } from "../components";
 
-import { Footer } from "../components";
+export const ServiciosP = () => {
 
-export const ServiciosP = () => (
-  <>
-    <div className="lg:max-w-[100%] w-full  sm:py-12 sm:px-[9rem]  flex justify-center items-start  bg-zinc-900">
-      <Footer />
-    </div>
-  </>
-);
+  return (
+    <>
+      <div className="flex justify-center items-start">
+        <div className="lg:max-w-[1280px] w-full px-4 sm:px-[9rem] sm:py-6 py-4 ">
+          <h1 className=" text-4xl font-semibold text-primary   mt-10  ">
+            Nuestros Servicios
+          </h1>
+            < ServiciosCards /> 
+        </div>
+      </div>
+    </>
+  );
+};
 
 export default ServiciosP;
