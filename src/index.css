@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
 
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+* {
+  box-sizing:border-box;
+}
 
 :root {
   font-family: Poppins;
@@ -19,26 +24,83 @@ body {
     animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
+.slide-top {
+  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-top 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.slide-top-plane {
+  -webkit-animation: slide-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    animation: slide-top 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+
+
+
+
+.active {
+color: #2E2C61;
+transition: color .2s ease-in;
+}
+
+.active + span {
+width: 100%;
+}
+
+
+.parentB .active  {
+background-color: #E3E5E8;
+}
 
 @-webkit-keyframes slide-top {
   0% {
     -webkit-transform: translateY(100px);
     transform: translateY(100px);
+    -webkit-opacity: 0;
+    opacity: 0;
   }
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
+    -webkit-opacity: 1;
+    opacity: 1;
   }
 }
 
 @keyframes slide-top {
   0% {
+    -webkit-opacity: 0;
+    opacity: 0;
     -webkit-transform: translateY(100px);
     transform: translateY(100px);
   }
   100% {
     -webkit-transform: translateY(0);
     transform: translateY(0);
+    -webkit-opacity: 1;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes slide-top-plane {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-top-plane {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
   }
 }
 
@@ -67,6 +129,72 @@ body {
 }
 
 
+
 .bg-img {
   background-image: url(/assets/hero--background.jpg);
+}
+
+.Contacto-img {
+  background-image: url(/assets/hero--background.jpg);
+}
+
+.parent {
+  row-gap:0px;
+}
+
+
+
+.parent  .hover-filter {
+  transition: all .1s ease-in-out;
+}
+
+.parent:hover  .hover-filter {
+  filter: invert(17%) sepia(24%) saturate(1646%) hue-rotate(204deg) brightness(100%) contrast(96%);
+  transition: all .1s ease-in-out;
+}
+
+.hover-filterA:hover {
+  filter: invert(17%) sepia(24%) saturate(1646%) hue-rotate(204deg) brightness(100%) contrast(96%);
+  transition: all .1s ease-in-out;
+}
+
+.parent:hover  .hover-filterUp {
+  filter: invert(17%) sepia(24%) saturate(1646%) hue-rotate(204deg) brightness(100%) contrast(96%);
+  transform:  translateY(-4px);
+  transition: all .1s ease-in-out;
+}
+.parent:hover  .hover-filterUp {
+  filter: invert(17%) sepia(24%) saturate(1646%) hue-rotate(204deg) brightness(100%) contrast(96%);
+  transform:  translateY(-4px);
+  transition: all .1s ease-in-out;
+}
+
+.parent:hover  .hover-nav {
+  display: flex;
+}
+
+.hide-content {
+  transition:  all .3s cubic-bezier(0,1,0,1);
+  max-height: 0px;
+}
+.show-content {
+  transition:  all .3s cubic-bezier(1,0,1,0);
+  max-height: 999999px;
+}
+
+
+
+.grandpa:nth-child(odd) .destino-card {
+    flex-direction: row-reverse;
+}
+
+
+@media screen and (max-width: 540px) {
+  .grandpa:nth-child(odd) .destino-card {
+      flex-direction: column;
+  }
+  .active {
+    color: #A58537 !important;
+    transition: color .2s ease-in;
+    }
 }

@@ -9,7 +9,16 @@ import {
   iconPlaya,
   iconPasaport,
   iconTranslate,
+  iconCalidad,
+  iconIntegridad,
+  iconPasion,
+  iconPuntualidad,
   imgCliente,
+  imgCliente1,
+  imgCliente2,
+  imgCliente3,
+  imgCliente4,
+  imgCliente5,
   imgHnosotros,
   iconPlane,
   imgLocationAlemania,
@@ -27,10 +36,28 @@ import {
   imgLocationReinoUnido,
   imgLocationSuiza,
   imgLocationRepublicaDominicana,
+  imgLocationItalia,
+  heroTraduccion,
+  heroViajes,
+  heroVisas,
+  heroEcuador,
 } from "../assets";
 import { NosotrosDesc } from "../components";
 
 export const navLinks = [
+  {
+    id: "inicio",
+    title: "Inicio",
+    link: "/",
+  },
+  {
+    id: "nosotros",
+    title: "Nosotros",
+    link: "/Nosotros",
+  },
+];
+
+export const navLinksMobile = [
   {
     id: "inicio",
     title: "Inicio",
@@ -53,42 +80,19 @@ export const contact = [
     id: "social-media-1",
     icon: iconIg,
     bg: "bgIg",
-    link: "https://www.twitter.com/",
+    link: "https://instagram.com/visaservi.ecu?igshid=YmMyMTA2M2Y=",
   },
   {
     id: "social-media-2",
     icon: iconWs,
     bg: "bgWs",
-    link: "https://www.twitter.com/",
+    link: "https://wa.link/6nsf0u",
   },
   {
     id: "social-media-3",
     icon: iconFb,
     bg: "bgFb",
-    link: "https://www.twitter.com/",
-  },
-];
-
-export const search = [
-  {
-    id: "location",
-    title: "Estados Unidos",
-    link: "#",
-  },
-  {
-    id: "location",
-    title: "Canada",
-    link: "#",
-  },
-  {
-    id: "location",
-    title: "Europa",
-    link: "#",
-  },
-  {
-    id: "location",
-    title: "Chile",
-    link: "#",
+    link: "https://www.facebook.com/profile.php?id=100065511638762",
   },
 ];
 
@@ -134,30 +138,26 @@ export const services = [
 export const elegirnos = [
   {
     id: "reason-1",
-    title: "Compromiso",
-    subtitle: "Nos encargamos de preparar toda la documentación.",
-    icon: iconPasaport,
+    title: "Calidad y excelencia en el servicio",
+    icon: iconCalidad,
     bg: "bg-yellow",
   },
   {
     id: "reason-2",
-    title: "Seguridad",
-    subtitle: "Nos encargamos de preparar toda la documentación23.",
-    icon: iconLocationRed,
+    title: "Pasion y compromiso",
+    icon: iconPasion,
     bg: "bg-red",
   },
   {
     id: "reason-3",
-    title: "Eficacia",
-    subtitle: "Nos encargamos de preparar toda la documentación423423.",
-    icon: iconLocation,
+    title: "Puntualidad y Confiabilidad",
+    icon: iconPuntualidad,
     bg: "bg-green",
   },
   {
     id: "reason-4",
-    title: "Experiencia",
-    subtitle: "Nos encargamos de preparar toda la documentación234234.",
-    icon: iconTranslate,
+    title: "Integridad y respeto.",
+    icon: iconIntegridad,
     bg: "bg-primary",
   },
 ];
@@ -170,13 +170,8 @@ export const info = [
   },
   {
     id: "info-2",
-    infoText: "099 2975 240",
+    infoText: "+593 97 936 3221 \n +593 98 705 6158 \n +593 98 813 4617",
     icon: iconPhone,
-  },
-  {
-    id: "info-3",
-    infoText: "Urdenor 1 mz 125 solar 11-12 Edificio Ferretal - Guayaquil",
-    icon: iconLocationRed,
   },
 ];
 
@@ -185,55 +180,93 @@ export const clientes = [
     id: "cliente-1",
     img: imgCliente,
     quote:
-      " Prueba Lorem ipsum dolor sit amet, consectetur adipiscing elit. In turpis nibh euismod amet tristique. Urna leo nisi posuere praesent. ",
+      " Gracias a la asesoría de Visaservi hoy podemos reunirnos con nuestros familiares en España. ",
+    autor: "Rosa y Olga Vargas ",
   },
   {
     id: "cliente-2",
-    img: imgCliente,
-    quote: "  adipiscing elit. In turpis nibh ulum leo nisi posuere praesent.",
+    img: imgCliente1,
+    quote:
+      "  Sus asesores me brindaron una atención personalizada de primera calidad.",
+    autor: "Luis Gómez ",
   },
   {
     id: "cliente-3",
-    img: imgCliente,
+    img: imgCliente2,
     quote:
-      "  adipiscing elit.istique. Urna ultrices vestibulum  posuere praesent.",
+      "   Hoy puedo cumplir mi sueño de conocer Europa gracias a Visaservi.",
+    autor: "Melanie Garcia ",
   },
   {
     id: "cliente-4",
-    img: imgCliente,
+    img: imgCliente3,
     quote:
-      "  adipiscing elit. In turpis nibh  sit amet, consectetur adipiscing elit. In ",
+      "Nuestro sueño de niñas hoy es una realidad gracias al trabajo de Visaservi ",
+    autor: "Génesis y Maribel Rodríguez ",
+  },
+  {
+    id: "cliente-5",
+    img: imgCliente4,
+    quote:
+      "La experiencia de sus asesores hace que el proceso sea sencillo y cómodo.",
+    autor: " Eva Morales",
+  },
+  {
+    id: "cliente-6",
+    img: imgCliente5,
+    quote: "  Cumpliremos nuestro sueño de conocer EE.UU. gracias a Visaservi.",
+    autor: "Familia Parrales ",
   },
 ];
 
 export const altHeroData = [
   {
     id: "page1",
-    img: imgHnosotros,
-    tile: "Asesoría profesional para Tramitación de Visas",
+    img: heroVisas,
+    descripcion: " Encuentra la información que necesitas para tu proceso de Visado Internacional",
+    titlePage: "Asesoría profesional para Tramitación de Visas.",
+    keywords: "trámite de visa, visa americana, visa negada, renovación de visa, asesoría de visa, visa europea ",
+    tile: "Asesoría profesional para Tramitación de Visas.",
     subtitle:
       "Nos encargamos de preparar toda la documentación requerida por los diferentes consulados, pago y programación de citas, llenado de formularios y capacitación para la entrevista consular.",
   },
   {
-    id: "page1",
-    img: imgCliente,
+    id: "page2",
+    img: heroEcuador,
+    titlePage: "Regularización Migratoria en Ecuador.",
+    descripcion: " Encuentra la información que necesitas para tu proceso de Visado y otra documentación Nacional",
+    keywords: "trámite de visa, visa ecuatoriana, visa negada, renovación de visa, asesoría de visa, Cedula ecuatoriana, pasaporte ecuatoriano ",
     tile: "Regularización Migratoria en Ecuador.",
     subtitle:
       "Brindamos asesoría para la Tramitación de visas para Ciudadanos extranjeros que deseen Visitar o Residenciarse en Ecuador.",
   },
   {
-    id: "page1",
-    img: imgCliente,
+    id: "page3",
+    img: heroViajes,
+    titlePage: "Paquetes Turísticos y Seguros de Viaje.",
+    descripcion: " Encuentra la información que necesitas sobre el destino de tu proximo viaje",
+    keywords: "trámite de visa, visa ecuatoriana, visa negada, renovación de visa, asesoría de visa ",
     tile: "Paquetes Turísticos y Seguros de Viaje.",
     subtitle:
       "Visaservi te ofrece los mejores destinos turísticos en Ecuador y El mundo.",
   },
   {
-    id: "page1",
-    img: imgCliente,
-    tile: "Traduducciones de Documentos.",
+    id: "page4",
+    img: heroTraduccion,
+    titlePage: "Traducciones de Documentos.",
+    descripcion: " Encuentra la información que necesitas para traducir e interptretar tus documentos",
+    tile: "Traducciones de Documentos.",
     subtitle:
-      "Contamos con traductores certificados que te brindarán un servicio de primera calidad para la traducción de tus documentos en distintos idiomas.",
+      "Nuestras traducciones certificadas son aceptadas por la mayoría de embajadas y consulados del país. Brindamos además asesoramiento para el uso de documentación nacional en el extranjero. Brindando un servicio donde las personas y empresas no tengan límites al momento de comunicarse o globalizar sus proyectos.\n \n Contamos con traductores certificados, especialistas en temas técnicos, legales, judiciales, financieros, comerciales, etcétera que te brindaran la traducción e interpretación correcta para su documento.",
+  },
+  {
+    id: "page5",
+    img: imgHnosotros,
+    titlePage: "Nosotros",
+    descripcion: " Conoce mas sobre Nosotros y por qué somos tu mejor elección para elegir tus destinos de viaje, tramitar tus visas y traducir tus documentos",
+    tile: "VisaServi, Asesoria migratoria",
+    subtitle:
+      "Desde el primer contacto con nosotros, nuestros asesores migratorios manejarán su solicitud paso a paso con gran cuidado y atención. Le brindaran una atención personalizada con toda la información y asesoría necesaria para su trámite migratorio, reserva de paquetes turísticos o traducciones. \n \n Nuestra misión es brindarles a nuestros clientes una experiencia de viaje única y extraordinaria. \n \n Nuestra Visión es ser  reconocidos como los mejores Asesores Migratorios y Agencia de Viajes del país,  por la excelencia en los servicios que brindamos y el deseo de nuestros clientes en permanecer leales a nuestra empresa, por que están satisfechos con nuestra atención. \n \n  Cumple tus Sueños, Viaja seguro.",
   },
 ];
 
@@ -265,6 +298,7 @@ export const serviciosVisa = [
   {
     id: "desc-1",
     title: "Visas Estados Unidos (USA)",
+    ws: "https://walink.co/fcba8f ",
     paises: [
       {
         subtitle: "Requisitos Visa de turismo USA",
@@ -304,7 +338,8 @@ export const serviciosVisa = [
     id: "desc-2",
     title:
       "Visas Schengen (España, Italia, Francia, Alemania, Suiza Y demás países de la Unión Europea)",
-    paises: [
+      ws: "https://walink.co/7a20fc ",
+      paises: [
       {
         subtitle: "Requisitos visa de Turismo Schengen:",
         requisitos: [
@@ -336,7 +371,7 @@ export const serviciosVisa = [
       {
         subtitle: "Requisitos visa de Trabajo Schengen",
         requisitos: [
-          "El formulario de solicitud debidamente cumplimentado que se puede descargar en la página web de los consulados españoles.",
+          "El formulario de solicitud debidamente rellenado.",
           "Una copia de la autorización de residencia y trabajo obtenida por el empleador.",
           "Pasaporte actualizado y con una vigencia mínima de cuatro meses antes de la fecha en que esté previsto viajar.",
           "Dos fotografías a color, sobre fondo blanco en tamaño pasaporte.",
@@ -363,6 +398,7 @@ export const serviciosVisa = [
   {
     id: "desc-3",
     title: "Visas Mexico",
+    ws: "https://walink.co/329464 ",
     paises: [
       {
         subtitle: "Requisitos de visa de  turismo México",
@@ -370,7 +406,7 @@ export const serviciosVisa = [
           "Pasaporte válido y vigente, en original y copia.",
           "Una fotografía con el rostro visible y sin anteojos, a color, tamaño pasaporte (4.5 cm de largo x 3.5 de ancho), con fondo blanco y de frente.",
           "Pago de derechos por la expedición de visa.",
-          "Arraigo u Solvencia económica"
+          "Arraigo u Solvencia económica",
         ],
       },
       {
@@ -398,18 +434,49 @@ export const serviciosVisa = [
           "Una fotografía con fondo blanco y de frente, con el rostro visible y sin anteojos, a color, las medidas deberán ser de 32 milímetros x 26 milímetros o de 39 milímetros x 31 milímetros.",
         ],
       },
-     
+    ],
+  },
+  {
+    id: "desc-4",
+    title: "Visas Reino Unido",
+    ws: "https://walink.co/1b0cce ",
+    paises: [
+      {
+        subtitle: "Requisitos de visa turismo Reino Unido",
+        requisitos: [
+          "Escaneo del pasaporte biométrico. ",
+          "Dónde te hospedarás. ",
+          "Datos de tu empleador e ingresos mensuales o anuales .",
+          "Historial de viajes de los últimos diez años. ",
+          "Información adicional dependiendo de tu estado civil (información sobre tu cónyuge o familiares dependientes). ",
+          "Antecedentes penales.",
+          "Correo electrónico: en él recibirás la información necesaria para la entrevista en la representación consular que corresponda.",
+        ],
+      },
+      {
+        subtitle: "Visa de estudios Reino Unido",
+        requisitos: [
+          "Pasaporte vigente ",
+          "Tener al menos 16 años.",
+          "Ser capaz de hablar, leer, escribir y comprender el inglés. ",
+          "Tener suficientes fondos para mantenerte y pagar las tasas del curso sin pedir ayuda de fondos públicos. ",
+          "Obtener el permiso de tus padres si aún no eres mayor de edad. ",
+          "Estar en posesión de un pasaporte válido. ",
+          "Obtener la admisión (antes de solicitar el permiso de estudio) a un curso acreditado e incluido en el Registro de patrocinadores con licencia.",
+        ],
+      },
     ],
   },
 ];
 
 export const serviciosEcuador = [
   {
-    id: "desc-3",
-    title: "Visa de turismo Ecuador",
+    id: "desc-1",
+    title: "Visas Ecuatorianas",
+    ws: "https://walink.co/25a49c",
     paises: [
       {
-        subtitle: " Requisitos",
+        subtitle: "Requisitos de Visa de turismo Ecuador",
         requisitos: [
           "Fotografía a color en formato JPG máximo de un mb, 5 x 5 cms",
           "Formulario de solicitud de visa",
@@ -419,18 +486,12 @@ export const serviciosEcuador = [
           "Pago de la tarifa fijada por la normativa aplicable.",
         ],
       },
-    ],
-  },
-  {
-    id: "desc-3",
-    title:
-      "Requisitos de Visa de residencia permanente por tiempo de permanencia mayor a 21 meses",
-    paises: [
       {
-        subtitle: " Requisitos",
+        subtitle:
+          "Requisitos de Visa de residencia permanente por tiempo de permanencia mayor a 21 meses",
         requisitos: [
           "Fotografía a color en formato JPG máximo de un mb, 5 x 5 cms",
-          "Pasaporte válido y con un periodo de vigencia mínimo de seis (6) meses; ",
+          "Pasaporte válido y con un periodo de vigencia mínimo de seis (6) meses;",
           "Acreditar los medios de vida lícitos que permitan la subsistencia de la persona solicitante",
           "Pago de la tarifa fijada (Arancel Consular y Diplomático).",
           "Certificado de antecedentes penales del Ecuador.",
@@ -438,30 +499,18 @@ export const serviciosEcuador = [
           "Documentación que de cuenta del hecho que ocasionó el otorgamiento de la visa de residencia temporal.",
         ],
       },
-    ],
-  },
-  {
-    id: "desc-3",
-    title: "Requisitos de Visa Virte",
-    paises: [
       {
-        subtitle: " Requisitos",
+        subtitle: "Requisitos de Visa Virte",
         requisitos: [
           "Solicitud de visa.",
-          "Pasaporte o cédula de identidad venezolana o registro consular otorgado por un Consulado venezolano acreditado en el Ecuador, documentos que estarán, en lo pertinente, acorde a lo establecido en el artículo 5 del Decreto Ejecutivo Nro. 436, de 1 de junio de 2022.",
+          "Pasaporte o cédula de identidad venezolana o registro consular otorgado por un Consulado venezolano acreditado en el Ecuador.",
           "Certificado que acredite no tener antecedentes judiciales y/o penales y/o policiales en el país de origen y en los que hubiera residido el solicitante durante los cinco años anteriores a su arribo al país, según sea el caso.",
           "Certificado de no registrar antecedentes penales del Ecuador. ",
           "Los niños y adolescentes venezolanos menores de nueve años, presentarán únicamente su partida de nacimiento o el registro consular.",
         ],
       },
-    ],
-  },
-  {
-    id: "desc-3",
-    title: "Requisitos de Visa de residencia permanente por Amparo",
-    paises: [
       {
-        subtitle: " Requisitos",
+        subtitle: "Requisitos de Visa de residencia permanente por Amparo",
         requisitos: [
           "Fotografía a color en formato JPG máximo de un mb, 5 x 5 cms.",
           "Pasaporte válido y con un periodo de vigencia mínimo de seis (6) meses.",
@@ -471,14 +520,8 @@ export const serviciosEcuador = [
           "Pago de la tarifa fijada por la autoridad de movilidad humana; y Demás documentos que la autoridad requiera en los casos que amerite.",
         ],
       },
-    ],
-  },
-  {
-    id: "desc-3",
-    title: "Requisitos de Visa de trabajo",
-    paises: [
       {
-        subtitle: " Requisitos",
+        subtitle: "Requisitos de Visa de trabajo",
         requisitos: [
           "Fotografía a color en formato JPG máximo de un mb, 5 x 5 cms.",
           "Pasaporte válido y con un periodo de vigencia mínimo de seis (6) meses.",
@@ -493,41 +536,31 @@ export const serviciosEcuador = [
     ],
   },
   {
-    id: "desc-3",
-    title: "Requisitos de Pasaporte ecuatoriano",
+    id: "desc-2",
+    title: "Pasaporte y Cedulas Ecuatorianas",
     paises: [
       {
-        subtitle: " Requisitos",
+        subtitle: "Requisitos de Pasaporte ecuatoriano",
         requisitos: ["Cédula de Identidad vigente y legible."],
       },
-    ],
-  },
-  {
-    id: "desc-3",
-    title: "Requisitos de Cédula ecuatoriana",
-    paises: [
       {
-        subtitle: " Requisitos",
+        subtitle: "Requisitos de Cédula ecuatoriana",
         requisitos: [
-          "Haber realizado el pago bajo la modalidad de botón de pago, banco corresponsal o banca interna.",
+          "Comprobante de pago.",
           "Documento de Instrucción Educativa.",
           "Profesión / Ocupación.",
-          "Carnet o Certificado para miembro de la Fuerza Pública Ecuatoriana.",
+          "Los menores de edad, deben estar acompañados por ambos padres.",
+          "Personas de la tercera edad cancela solo el 50%",
+          "Personas con discapacidad exoneradas de pago.",
         ],
       },
-    ],
-  },
-  {
-    id: "desc-3",
-    title: "Requisitos de Cédula ecuatoriana para extranjeros",
-    paises: [
       {
-        subtitle: " Requisitos",
+        subtitle: "Requisitos de Cédula ecuatoriana para extranjeros",
         requisitos: [
           "Turno solicitado.",
+          "Visa vigente",
           "Pasaporte válido o documento de identidad emitido por el país de origen, sobre el cual fue emitida la visa por el Estado ecuatoriano, válido con un periodo de vigencia mínima de seis meses.",
           "Movimiento migratorio (verificación Interna).",
-          "Prueba de la vigencia del hecho que justificó la concesión de la visa o del vínculo de consanguinidad o afinidad en virtud del cual se la otorgó.",
         ],
       },
     ],
@@ -535,94 +568,129 @@ export const serviciosEcuador = [
 ];
 
 export const servicesLocations = [
-  // {
-  //   id: "location1",
-  //   title: "Galápagos",
-  //   desc: "Algún hechizo mágico convirtió a la flora y fauna de éste lugar en algo único, e imposible de encontrar en otro lugar del planeta.",
-  //   img: imgLocationGalapagos,
-  // },
-  // {
-  //   id: "location2",
-  //   title: "Colombia",
-  //   desc: "Viajar por Colombia es compartir con una infinidad de culturas y descubrir paisajes inimaginables, pues solo este país es capaz combinar opuestos como la nieve y el mar en un mismo lugar.",
-  //   img: imgLocationColombia,
-  // },
+  {
+    id: "location1",
+    title: "Galápagos",
+    desc: "Algún hechizo mágico convirtió a la flora y fauna de éste lugar en algo único, e imposible de encontrar en otro lugar del planeta.",
+    img: imgLocationGalapagos,
+  },
+  {
+    id: "location2",
+    title: "Colombia",
+    desc: "Viajar por Colombia es compartir con una infinidad de culturas y descubrir paisajes inimaginables, pues solo este país es capaz combinar opuestos como la nieve y el mar en un mismo lugar.",
+    img: imgLocationColombia,
+  },
   {
     id: "location3",
     title: "Perú",
     desc: "El Perú es uno de los países más variados del mundo. Un país multicultural, lleno de tradiciones, una laureada gastronomía y vastas reservas naturales.",
     img: imgLocationPeru,
   },
-  // {
-  //   id: "location4",
-  //   title: "Argentina",
-  //   desc: "Argentina es uno de los países más bellos del mundo. Con una rica historia, una cultura encantadora y una comida deliciosa, hay mucho que ver y hacer aquí.",
-  //   img: imgLocationArgentina,
-  // },
-  // {
-  //   id: "location5",
-  //   title: "Brasil",
-  //   desc: "Tierra de grandes fiestas al aire libre con música y baile, de gente colorida y playas para nadar. Es un país de contrastes: ciudades cosmopolitas y bosques vírgenes del hombre.",
-  //   img: imgLocationBrasil,
-  // },
-  // {
-  //   id: "location6",
-  //   title: "Panamá",
-  //   desc: "Panamá es un país con un pulso moderno, pero también con un fuerte sentido de su historia. Con algunas de las playas más hermosas de América Central, gastronomía inigualable, Centros comerciales y zona libre para las compras.",
-  //   img: imgLocationPanama,
-  // },
-  // {
-  //   id: "location7",
-  //   title: "México",
-  //   desc: "Desde la playa hasta la montaña, del desierto a la selva, de la zona arqueológica a la vibrante metrópoli, de lo dulce a lo picante, de la tranquilidad a la algarabía de sus fiestas, México tiene todo lo que busca el turista",
-  //   img: imgLocationMexico,
-  // },
+  {
+    id: "location4",
+    title: "Argentina",
+    desc: "Argentina es uno de los países más bellos del mundo. Con una rica historia, una cultura encantadora y una comida deliciosa, hay mucho que ver y hacer aquí.",
+    img: imgLocationArgentina,
+  },
+  {
+    id: "location5",
+    title: "Brasil",
+    desc: "Tierra de grandes fiestas al aire libre con música y baile, de gente colorida y playas para nadar. Es un país de contrastes: ciudades cosmopolitas y bosques vírgenes del hombre.",
+    img: imgLocationBrasil,
+  },
+  {
+    id: "location6",
+    title: "Panamá",
+    desc: "Panamá es un país con un pulso moderno, pero también con un fuerte sentido de su historia. Con algunas de las playas más hermosas de América Central, gastronomía inigualable, Centros comerciales y zona libre para las compras.",
+    img: imgLocationPanama,
+  },
+  {
+    id: "location7",
+    title: "México",
+    desc: "Desde la playa hasta la montaña, del desierto a la selva, de la zona arqueológica a la vibrante metrópoli, de lo dulce a lo picante, de la tranquilidad a la algarabía de sus fiestas, México tiene todo lo que busca el turista",
+    img: imgLocationMexico,
+  },
   {
     id: "location8",
     title: "Curazao",
     desc: "La influencia de distintas culturas, la preciosa arquitectura colonial, sus formaciones geográficas y diversa fauna marina, su particular gastronomía y la punzante alegría de sus habitantes son algunos de esos atributos.",
     img: imgLocationCurazao,
   },
-  // {
-  //   id: "location9",
-  //   title: "República Dominicana",
-  //   desc: "Rodeada por el Océano Atlántico hacia el Norte y el Mar Caribe hacia el Sur, República Dominicana se enorgullece de contar con las mejores playas del mundo, magníficos hoteles y resorts.",
-  //   img: imgLocationRepublicaDominicana,
-  // },
+  {
+    id: "location9",
+    title: "República Dominicana",
+    desc: "Rodeada por el Océano Atlántico hacia el Norte y el Mar Caribe hacia el Sur, República Dominicana se enorgullece de contar con las mejores playas del mundo, magníficos hoteles y resorts.",
+    img: imgLocationRepublicaDominicana,
+  },
   {
     id: "location10",
     title: "Estados Unidos",
     desc: "País decultura en Boston, Filadelfia o San Francisco. País de diversión y fiesta en Miami, Nueva Orleans o Los Ángeles. Tierra de inmensidades en las Rocosas, Alaska o Hawai.",
     img: imgLocationEstadosUnidos,
   },
-  // {
-  //   id: "location11",
-  //   title: "España",
-  //   desc: "España es un país turístico al que acuden anualmente millones de viajeros atraídos por sus playas y agradable clima, el abundante patrimonio artístico del país y la riqueza gastronómica.",
-  //   img: imgLocationEspaña,
-  // },
-  // {
-  //   id: "location12",
-  //   title: "Francia",
-  //   desc: "Francia se caracteriza por la oferta turística que presenta, la cual se enfoca en el arte, la historia y la gastronomía que mezclado con las distintas manifestaciones forman un conjunto de experiencias interesantes e inolvidables para el turista. ",
-  //   img: imgLocationFrancia,
-  // },
-  // {
-  //   id: "location13",
-  //   title: "Alemania",
-  //   desc: "Alemania ofrece una gran variedad de atracciones: ya sean las turbulentas Ciudades Mágicas, las medianas y pequeñas ciudades con su estilo único, los impresionantes paisajes naturales, la gastronomía de temporada o los eventos musicales y deportivos.",
-  //   img: imgLocationAlemania,
-  // },
-  // {
-  //   id: "location14",
-  //   title: "Suiza",
-  //   desc: "Suiza es un pequeño país europeo de mucha belleza natural, donde las grandes ciudades están cerca de montañas, lagos, bosques, ríos y abundante aire fresco.",
-  //   img: imgLocationSuiza,
-  // },
-  // {
-  //   id: "location15",
-  //   title: "Reino Unido",
-  //   desc: "El Reino Unido divide sus grandes contribuciones la humanidad en sus paisajes entre Inglaterra, Gales, Escocia e Irlanda del Norte. Encontrarás muchísimo para hacer, desde la energética Londres hasta las indomables Tierras Altas de Escocia.",
-  //   img: imgLocationReinoUnido,
-  // },
+  {
+    id: "location11",
+    title: "España",
+    desc: "España es un país turístico al que acuden anualmente millones de viajeros atraídos por sus playas y agradable clima, el abundante patrimonio artístico del país y la riqueza gastronómica.",
+    img: imgLocationEspaña,
+  },
+  {
+    id: "location12",
+    title: "Francia",
+    desc: "Francia se caracteriza por la oferta turística que presenta, la cual se enfoca en el arte, la historia y la gastronomía que mezclado con las distintas manifestaciones forman un conjunto de experiencias interesantes e inolvidables para el turista. ",
+    img: imgLocationFrancia,
+  },
+  {
+    id: "location13",
+    title: "Alemania",
+    desc: "Alemania ofrece una gran variedad de atracciones: ya sean las turbulentas Ciudades Mágicas, las medianas y pequeñas ciudades con su estilo único, los impresionantes paisajes naturales, la gastronomía de temporada o los eventos musicales y deportivos.",
+    img: imgLocationAlemania,
+  },
+  {
+    id: "location14",
+    title: "Suiza",
+    desc: "Suiza es un pequeño país europeo de mucha belleza natural, donde las grandes ciudades están cerca de montañas, lagos, bosques, ríos y abundante aire fresco.",
+    img: imgLocationSuiza,
+  },
+  {
+    id: "location15",
+    title: "Reino Unido",
+    desc: "El Reino Unido divide sus grandes contribuciones la humanidad en sus paisajes entre Inglaterra, Gales, Escocia e Irlanda del Norte. Encontrarás muchísimo para hacer, desde la energética Londres hasta las indomables Tierras Altas de Escocia.",
+    img: imgLocationReinoUnido,
+  },
+  {
+    id: "location16",
+    title: "Italia",
+    desc: "Italia es el lugar perfecto para explorar la cultura y la historia de Europa. Cuando se trata de turismo, Italia lo tiene todo:  Sí estás buscando unas vacaciones que combinen aventura, cultura,  gastronomía e historia , no busque más allá de Italia.",
+    img: imgLocationItalia,
+  },
+];
+
+export const traduccionInfo = [
+  {
+    id: "desc-1",
+    paises: [
+      {
+        subtitle: "Servicio de traducción e interpretación de documentos:",
+        requisitos: [
+          "Técnicos",
+          "Legales",
+          "Judiciales",
+          "Financieros",
+          "Comerciales",
+        ],
+      },
+      {
+        subtitle: "Traducimos a los siguientes idiomas:",
+        requisitos: [
+          "Ingles",
+          "Francés",
+          "Alemán",
+          "Italiano",
+          "Portugués",
+          "Español",
+        ],
+      },
+    ],
+  },
 ];

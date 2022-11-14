@@ -1,9 +1,13 @@
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   mode: "jit",
   theme: {
     extend: {
+      backgroundImage: {
+        'usImg': "imgLocationEstadosUnidos"
+      },
       colors: {
         bgPrimary: "#F8F9FA",
         primary: "#2E2C61",

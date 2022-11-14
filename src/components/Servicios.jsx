@@ -1,17 +1,19 @@
 import { ServiciosCards } from "../components";
+import styles from "../style";
+import { motion } from "framer-motion";
 
 const Servicios = () => (
-  <div className=" mt-10 sm:pt-24 ">
-    <div className="flex flex-col sm:flex-row gap-y-4 sm:gap-y-0 sm:gap-x-24 justify-between">
-      <h2 className=" text-4xl font-semibold text-primary">Servicios</h2>
-      <p className=" text-sm">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean feugiat
-        odio nulla accumsan nullam dignissim. Fames amet tempor tempor et elit
-        libero nunc. Facilisis lorem malesuada lectus laoreet felis, sit sed
-        libero egestas.
-      </p>
-    </div>
-    < ServiciosCards/>
+  <div className=" mt-20 ">
+    <motion.div
+      className="flex flex-col sm:flex-row gap-y-4 sm:gap-y-0 sm:gap-x-24 justify-between"
+      initial={{ opacity: 0, translateY: "12px" }}
+      whileInView={{ opacity: 1, translateY: "0" }}
+      transition={{ duration: 0.3 }}
+      viewport={{ once: true }}
+    >
+      <h2 className={`${styles.heading2}`}>Servicios</h2>
+    </motion.div>
+    <ServiciosCards />
   </div>
 );
 

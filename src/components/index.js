@@ -10,8 +10,11 @@ import Hero_extra from './Hero_extra'
 import Button from './Button'
 import NosotrosDesc from './NosotrosDesc'
 import NosotrosGallery from './NosotrosGallery'
-import ServiciosDesc from './ServiciosDesc'
 import ScrollToTop from './ScrollToTop'
+import ServicioDescCallouts from './ServicioDescCallouts'
+import ServicioDescImgs from './ServicioDescImgs'
+import ServicioDescInfo from './ServicioDescInfo'
+
 
 export {
     Navbar,
@@ -26,6 +29,8 @@ export {
     Button,
     NosotrosDesc,
     NosotrosGallery,
-    ServiciosDesc,
     ScrollToTop,
+    ServicioDescCallouts,
+    ServicioDescImgs,
+    ServicioDescInfo,
 }

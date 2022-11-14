@@ -1,37 +1,44 @@
 import React from "react";
+import styles, {layout} from "../style";
 
 import {
   Hero,
   Servicios,
   Elegirnos,
   Clientes,
-  Contacto,
-  Footer,
 } from "../components";
+import { Helmet } from "react-helmet-async";
 
-export const Home = () => (
+export const Home = () =>{ return (
   <>
-    <div className="flex justify-center items-start">
-      <div className="lg:max-w-[1280px] w-full px-4 sm:px-[9rem] sm:py-8 py-4 ">
+    <Helmet >
+    <title>VisaServi | Servicio de visados nacionales e internacionales</title>
+    <meta name="description" content="VisaServi te brinda una atención personalizada con toda la información y asesoría necesaria para su trámite migratorio, reserva de paquetes turísticos o traducciones." />
+    <meta name="keywords" content="visas, visado, Ecuador, traducciones de Documentos, asesoría de viajes, Estados Unidos, Europa, Canada, Reino Unido, Mexico " />
+
+    </Helmet>
+
+    <section className={`${styles.flexStart}`}>
+      <div className={` ${layout.section}`}>
         <Hero />
       </div>
-    </div>
-    <div className="flex justify-center items-start">
-      <div className="lg:max-w-[1280px] w-full px-4 sm:px-[9rem] sm:py-6 py-4 ">
+    </section>
+    <section className={`${styles.flexStart}`}>
+      <div className={` ${layout.section}`}>
         <Servicios />
       </div>
-    </div>
-    <div className="flex justify-center items-start">
-      <div className="lg:max-w-[1280px] w-full px-4 sm:px-[9rem] sm:py-6 py-4 ">
+    </section>
+    <section className={`${styles.flexStart}`}>
+      <div className={` ${layout.section}`}>
         <Elegirnos />
       </div>
-    </div>
-    <div className="flex justify-center items-start">
-      <div className="lg:max-w-[1280px] w-full px-4 sm:px-[9rem] sm:py-6 py-4 ">
+    </section>
+    <section className={`${styles.flexStart}`}>
+      <div className={` ${layout.section}`}>
         <Clientes />
       </div>
-    </div>
+    </section>
   </>
-);
+)};
 
 export default Home;

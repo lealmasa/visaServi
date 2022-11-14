@@ -1,21 +1,37 @@
-import {
-    ServiciosCards,
-    Contacto,
-    Footer,
-  } from "../components";
+import { ServiciosCards, Contacto, Footer } from "../components";
+
+import styles, { layout } from "../style";
+import { motion } from "framer-motion";
+import { Helmet } from "react-helmet-async";
 
 export const ServiciosP = () => {
-
   return (
     <>
-      <div className="flex justify-center items-start">
-        <div className="lg:max-w-[1280px] w-full px-4 sm:px-[9rem] sm:py-6 py-4 ">
-          <h1 className=" text-4xl font-semibold text-primary   mt-10  ">
+      <Helmet>
+        <title>VisaServi | Servicios</title>
+        <meta
+          name="description"
+          content="Conoce información necesaria para tus trámites migratorios, reserva de paquetes turísticos o traducciones."
+        />
+        <meta
+          name="keywords"
+          content="visas, visado, Ecuador, traducciones de Documentos, asesoría de viajes, Estados Unidos, Europa, Canada, Reino Unido, Mexico "
+        />
+      </Helmet>
+      <section className={`${styles.flexStart}`}>
+        <div className={` ${layout.section}`}>
+          <motion.h1
+            className={` ${styles.heading2}   mt-10  `}
+            initial={{ opacity: 0, translateY: "12px" }}
+            whileInView={{ opacity: 1, translateY: "0" }}
+            transition={{ duration: 0.3 }}
+            viewport={{ once: true }}
+          >
             Nuestros Servicios
-          </h1>
-            < ServiciosCards /> 
+          </motion.h1>
+          <ServiciosCards />
         </div>
-      </div>
+      </section>
     </>
   );
 };
