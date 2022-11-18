@@ -61,7 +61,7 @@ export const navLinksMobile = [
   {
     id: "inicio",
     title: "Inicio",
-    link: "/Visaservi",
+    link: "/",
   },
   {
     id: "nosotros",
@@ -125,8 +125,8 @@ export const services = [
     link: "#",
   },
   {
-    id: "Traduducciones-de-Documentos",
-    title: "Traduducciones de Documentos.",
+    id: "Traducciones-de-Documentos",
+    title: "Traducciones de Documentos.",
     subtitle:
       "Contamos con traductores certificados que te brindarán un servicio de primera calidad para la traducción de tus documentos en distintos idiomas.",
     icon: iconTranslate,
@@ -165,7 +165,7 @@ export const elegirnos = [
 export const info = [
   {
     id: "info-1",
-    infoText: "Loremimsum@gmail.com",
+    infoText: "info@visaservi.com",
     icon: iconMail,
   },
   {

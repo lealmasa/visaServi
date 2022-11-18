@@ -198,3 +198,8 @@ background-color: #E3E5E8;
     transition: color .2s ease-in;
     }
 }
+
+.Toastify__toast-container--bottom-right {
+  bottom: 0em !important;
+  right: 1em !important;
+}

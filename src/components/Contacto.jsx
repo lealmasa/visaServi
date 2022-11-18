@@ -2,24 +2,54 @@ import styles, { layout } from "../style";
 import { contact, info } from "../constants/index";
 import { iconLocationRed } from "../assets";
 import { motion } from "framer-motion";
+import { ToastContainer, toast } from "react-toastify";
+import { Slide, Zoom, Flip, Bounce } from "react-toastify";
 
-import React, { useRef } from "react";
+import "react-toastify/dist/ReactToastify.css";
+
+import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contacto = () => {
-
+  const [nombre, setNombre] = useState("");
+  const [correo, setCorreo] = useState("");
+  const [mensaje, setMensaje] = useState("");
   const form = useRef();
+  const sendButton = (e) => {
+    e.preventDefault();
+    {sendEmail}
+    {notify}
+
+  }
 
   const sendEmail = (e) => {
     e.preventDefault();
 
-    emailjs.sendForm('service_vom6g1v', 'template_djrtuyg', form.current, '_Wj-QZ7diM_kr2xlq')
-      .then((result) => {
+    emailjs
+      .sendForm(
+        "service_vom6g1v",
+        "template_djrtuyg",
+        form.current,
+        "_Wj-QZ7diM_kr2xlq"
+      )
+      .then(
+        (result) => {
           console.log(result.text);
-      }, (error) => {
+        },
+        (error) => {
           console.log(error.text);
-      });
+        }
+      );
+
+    setNombre("");
+    setCorreo("");
+    setMensaje("");
   };
+
+  const notify = () =>
+    toast.success("Enviado, gracias por comunicarte con nosotros!", {
+      position: toast.POSITION.BOTTOM_RIGHT,
+    });
 
   return (
     <div
@@ -81,15 +111,16 @@ const Contacto = () => {
               </div>
             ))}
             <div className=" bg-[#E9EFFF] flex flex-col rounded-xl p-4 gap-y-4">
-              <div className=" flex items-center gap-x-4">
+              <div className=" flex items-start gap-x-4">
                 <img
                   src={iconLocationRed}
                   alt="icono de locación"
                   className=" max-w-[24px]"
                 />
                 <p className=" text-sm  leading-tight mt-[3px] ">
-                  Avenida Vicente Norero de Lucca y Justino, Julio Cornejo
-                  manzana 404, Guayaquil 090521
+                  Avenida Vicente Norero y Justino Cornejo, Sl 33, Mz 404,
+                  detrás del Gobierno zonal de Guayaquil, frente del condominio
+                  Isabella.
                 </p>
               </div>
 
@@ -117,55 +148,67 @@ const Contacto = () => {
       >
         <h3 className=" text-xl text-[#A58537] mb-4">Envianos un Mensaje</h3>
         <div className={`${layout.itemCard}`}>
-          <form ref={form} onSubmit={sendEmail} className=" flex flex-col gap-y-4">
+          <form
+            ref={form}
+            onInput= {sendButton}
+
+            className=" flex flex-col gap-y-4"
+          >
             <div>
               <label className=" text-sm text-gray-500" htmlFor="nombre">
                 Su nombre
               </label>
               <input
-                className=" border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none block"
+                className=" focus:border-primary border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none block"
                 type="text"
                 name="user_name"
-                id=""
+                id="nombre"
+                onChange={(event) => setNombre(event.target.value)}
+                value={nombre}
+                required
               />
             </div>
+
             <div>
-              <label className=" text-sm text-gray-500" htmlFor="apellido">
-                Su apellido
-              </label>
-              <input
-                className=" border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none block"
-                type="text"
-                name="user_apellido"
-                id=""
-              />
-            </div>
-            <div>
-              <label className=" text-sm text-gray-500" htmlFor="celular" >
+              <label className=" text-sm text-gray-500" htmlFor="email">
                 Su Correo
               </label>
               <input
-                className=" border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none block"
+                className=" peer focus:invalid:border-pink-500 focus:invalid:ring-pink-500 invalid:border-pink-500 invalid:text-pink-600 focus:border-primary border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none block"
                 name="user_email"
-                id=""
-                type="email" 
+                id="email"
+                type="email"
+                onChange={(event) => setCorreo(event.target.value)}
+                value={correo}
               />
+              <p class="peer-invalid:mt-2 mt-[-16px] invisible peer-invalid:visible text-pink-600 text-sm">
+                Verifica que tu correo sea valido
+              </p>
             </div>
             <div>
               <label className=" text-sm text-gray-500" htmlFor="mensaje">
                 Su mensaje
               </label>
               <textarea
-                className=" border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none block min-h-[120px]"
+                className=" focus:border-primary border border-gray-300 rounded-lg py-2 px-4 w-full focus:outline-none block min-h-[120px]"
                 type="text"
                 name="message"
-                id=""
+                id="mensaje"
+                onChange={(event) => setMensaje(event.target.value)}
+                value={mensaje}
+                required
+
               />
             </div>
-            <input className=" bg-primary hover:scale-[1.05] active:scale-[.95] 300s ease-in-out rounded flex gap-x-4  sm:pr-[16px] sm:pl-[20px] py-[14px] justify-center items-center content-center  sm:max-w-[314px] text-neutral-100 text-sm drop-shadow-xl cursor-pointer ml-auto  px-2 group  relative isolate" type="submit" value="Enviar"/>
+            <input
+              className=" bg-primary hover:scale-[1.03] active:scale-[.95] 300s ease-in-out rounded flex gap-x-4  sm:pr-[16px] sm:pl-[20px] py-[14px] justify-center items-center content-center  sm:max-w-full text-neutral-100 text-sm drop-shadow-xl cursor-pointer mt-4  px-2 group  relative isolate"
+              type="submit"
+              value="Enviar"
+            />
           </form>
         </div>
       </motion.div>
+      <ToastContainer transition={Zoom} />
     </div>
   );
 };

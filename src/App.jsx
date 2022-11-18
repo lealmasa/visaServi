@@ -21,7 +21,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />}></Route>
           <Route path="/Servicios" element={<ServiciosP />}></Route>
-          <Route path="/Servicios/Traduducciones-de-Documentos" element={<ServicioVisasTraducciones />}></Route>
+          <Route path="/Servicios/Traducciones-de-Documentos" element={<ServicioVisasTraducciones />}></Route>
           <Route path="/Servicios/Asesoria-profesional-para-Tramitacion-de-Visas" element={<ServicioVisasInternacionales />}></Route>
           <Route path="/Servicios/Regularizacion-Migratoria-en-Ecuador" element={<ServicioVisasEcuador />}></Route>
           <Route path="/Servicios/Paquetes-Turisticos-y-Seguros-de-Viaje" element={<ServicioVisasViajes />}></Route>
