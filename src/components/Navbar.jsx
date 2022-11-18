@@ -2,7 +2,7 @@ import { useState } from "react";
 import { NavLink, Route, Routes } from "react-router-dom";
 import { logo, iconBurger, iconClose } from "../assets";
 import { HashLink } from "react-router-hash-link";
-import { navLinks,navLinksMobile } from "../constants/index";
+import { navLinks, navLinksMobile } from "../constants/index";
 import { contact } from "../constants/index";
 import { useParams } from "react-router-dom";
 import "../index.css";
@@ -112,7 +112,11 @@ const Navbar = () => {
                 key={social.id}
                 className={`${social.bg} grid place-content-center rounded-lg w-[32px] h-[32px] cursor-pointer `}
               >
-                <img src={social.icon} alt="icono de redes sociales" className="  h-6"></img>
+                <img
+                  src={social.icon}
+                  alt="icono de redes sociales"
+                  className="  h-6"
+                ></img>
               </div>
 
               <div
@@ -142,7 +146,7 @@ const Navbar = () => {
                 <li>
                   <NavLink
                     exact
-                    to={nav.link}
+                    to={nav.link} end
                     onClick={() => setToggle((prev) => !prev)}
                   >
                     {nav.title}
@@ -172,7 +176,11 @@ const Navbar = () => {
                     key={social.id}
                     className={`${social.bg} grid place-content-center rounded-lg w-[32px] h-[32px] cursor-pointer `}
                   >
-                    <img src={social.icon} alt="icono de redes sociales" className="  h-6"></img>
+                    <img
+                      src={social.icon}
+                      alt="icono de redes sociales"
+                      className="  h-6"
+                    ></img>
                   </div>
 
                   <div
